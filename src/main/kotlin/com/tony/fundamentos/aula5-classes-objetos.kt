@@ -1,6 +1,7 @@
 package com.tony.fundamentos
 
 import com.tony.fundamentos.model.Conta
+import com.tony.fundamentos.model.ContaCorrente
 
 /*
 
@@ -22,10 +23,10 @@ fun main() {
     val salarioTony = 3000.00
     val salarioThays = 3000.00
 
-    val contaTony = Conta(titular = "Tony Araújo", numero = 1001)
+    val contaTony = ContaCorrente(titular = "Tony Araújo", numero = 1001)
     contaTony.deposita(salarioTony)
 
-    val contaThays = Conta(titular = "Thays Neves", numero = 2002)
+    val contaThays = ContaCorrente(titular = "Thays Neves", numero = 2002)
     contaThays.deposita(salarioThays)
 
     println(" =============: Conta Tony")

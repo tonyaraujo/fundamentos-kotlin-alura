@@ -1,14 +1,14 @@
 package com.tony.fundamentos.model
 
-class Conta(val titular: String, val numero: Int) {
+abstract class Conta(val titular: String, val numero: Int) {
     var saldo = 0.0
-        private set
+        protected set
 
     fun deposita(valor: Double) {
         if(valor > 0) saldo += valor
     }
 
-    fun saca(valor: Double) {
+    open fun saca(valor: Double) {
         if (saldo >= valor) saldo -= valor
     }
 

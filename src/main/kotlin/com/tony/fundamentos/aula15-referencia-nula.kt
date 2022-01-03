@@ -19,22 +19,21 @@ fun main() {
     val item1 = NovoItem(produto = produto, quantidade = 2)
     val item2 = NovoItem(produto = null, quantidade = 2)
 
-    println("Produto item 1: ${item1.produto?.descricao}")
-    println("Produto item 2: ${item2.produto?.descricao}")
+    println("Descricao Produto item 1: ${item1.produto?.descricao}")
+    println("Descricao Produto item 1: ${item1.produto?.valor}")
+    println("quantidade item 1: ${item1.quantidade}")
+    println("Descricao Produto item 2: ${item2.produto?.descricao}")
+    println("Descricao Produto item 2: ${item2.produto?.valor}")
+    println("quantidade item 2: ${item2.quantidade}")
 
-    // Variaáveis nullable's
+    // Variáveis nullable's
 
     val cidade = Cidade(nome = "Rio de Janeiro", estado = null)
-
-    if(cidade.estado == null) {
-        cidade.estado?.sigla = "RJ"
-    }
 
     val sigla = cidade.estado?.sigla ?: "RJ"
     println(sigla)
 
 }
-
 
 class NovoProduto(val valor: Double, val descricao: String)
 class NovoItem(val produto: NovoProduto?, val quantidade: Int)
